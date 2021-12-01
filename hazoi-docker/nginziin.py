@@ -21,7 +21,7 @@ def main():
                     meu = meu.strip()
                     fa = fa.strip()
                     if meu:
-                        print(mai_lukdui.sub('', meu), file=meu_dong)
+                        print(mai_lukdui.sub('',meu), file=meu_dong)
                         print(mai_hakkafa.sub('',fa), file=fa_dong)
 
 
