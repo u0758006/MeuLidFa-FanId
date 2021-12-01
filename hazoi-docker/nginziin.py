@@ -6,7 +6,7 @@ from urllib.request import urlopen
 from os import makedirs
 from os.path import join
 
-mai_lukdui = re.compile('(.+?)')
+mai_lukdui = re.compile('\(.+?\)')
 mai_hakkafa = re.compile('（.+?）')
 
 def main():
