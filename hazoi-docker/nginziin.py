@@ -16,7 +16,7 @@ def main():
         with open(join(miang, 'fa.txt'), 'wt') as fa_dong:
             for hang in ngin():
                 for meu, fa in zip(
-                    hang['例句'].split('\n'), hang['翻譯'].split('\n')
+                    hang['客語標音'].split('\n'), hang['客家語'].split('\n')
                 ):
                     meu = meu.strip()
                     fa = fa.strip()
