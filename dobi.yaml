@@ -16,13 +16,13 @@ job=don-ngiliau: # 斷詞斷字語料
   use: hazoi_docker
   command: |
     bash -eux -c '
-      cat /ngienbun-ngiliau/meu.txt | sed "s/\(.\)/\1 /g" \
+      cat /ngienbun-ngiliau/meu.txt | sed "s/\(.\)/\/g" \
         | head -n 500 > /doncii-ngiliau/meu.valid
-      cat /ngienbun-ngiliau/meu.txt | sed "s/\(.\)/\1 /g" \
+      cat /ngienbun-ngiliau/meu.txt | sed "s/\(.\)/\/g" \
         | tail -n +501 > /doncii-ngiliau/meu.train
-      cat /ngienbun-ngiliau/fa.txt  | sed "s/\(.\)/\1 /g" \
+      cat /ngienbun-ngiliau/fa.txt  | sed "s/\(.\)/\/g" \
         | head -n 500 > /doncii-ngiliau/fa.valid
-      cat /ngienbun-ngiliau/fa.txt  | sed "s/\(.\)/\1 /g" \
+      cat /ngienbun-ngiliau/fa.txt  | sed "s/\(.\)/\/g" \
         | tail -n +501 > /doncii-ngiliau/fa.train
     '
   mounts: [ngienbun_ngiliau, doncii_ngiliau, ]
